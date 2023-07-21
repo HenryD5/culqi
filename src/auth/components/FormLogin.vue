@@ -19,14 +19,14 @@ async function login() {
 </script>
 
 <template>
-  <form class="w-full px-8 sm:px-px sm:w-120" @submit.prevent="login()">
+  <form class="w-full px-4 sm:px-px sm:w-120" @submit.prevent="login()">
     <h4 class="text-2xl font-bold mt-3 mb-6 text-center">Inicia sesión</h4>
     <div class="my-5">
       <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Correo electrónico<span
           class="text-failed"> *</span></label>
       <div class="mt-2">
         <input id="email" name="email" type="email" autocomplete="email" placeholder="Ingresa el correo electrónico"
-          v-model="state.email" required autofocus
+          v-model="state.email" required
           class="block w-full border-0 py-4 px-6 rounded-[10px] text-gray-900 shadow-sm ring-1 ring-inset ring-gray-extra-light placeholder:text-gray-light  placeholder:font-normal focus:ring-2 focus:ring-inset focus:ring-success text-sm font-medium" />
       </div>
     </div>
