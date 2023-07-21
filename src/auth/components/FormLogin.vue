@@ -27,7 +27,7 @@ async function login() {
       <div class="mt-2">
         <input id="email" name="email" type="email" autocomplete="email" placeholder="Ingresa el correo electrónico"
           v-model="state.email" required
-          class="block w-full border-0 py-4 px-6 rounded-[10px] text-gray-900 shadow-sm ring-1 ring-inset ring-gray-extra-light placeholder:text-gray-light  placeholder:font-normal focus:ring-2 focus:ring-inset focus:ring-success text-sm font-medium" />
+          class="block w-full border-px py-4 px-6 rounded-[10px] text-gray-900 shadow-sm ring-1 ring-inset ring-gray-extra-light placeholder:text-gray-light  placeholder:font-normal focus:ring-2 focus:ring-inset focus:ring-success focus-within:ring-2 focus-within:ring-inset  focus-within:ring-success text-sm font-medium" />
       </div>
     </div>
     <div class="mt-5 mb-7">
@@ -36,7 +36,7 @@ async function login() {
       <div class="mt-2">
         <input id="password" name="password" type="password" autocomplete="password" placeholder="Ingresa la contraseña"
           v-model="state.password"
-          class="block w-full border-0 py-4 px-6 rounded-[10px] text-gray-900 shadow-sm ring-1 ring-inset ring-gray-extra-light placeholder:text-gray-light  placeholder:font-normal focus:ring-2 focus:ring-inset focus:ring-success text-sm font-medium" />
+          class="block w-full border-0 py-4 px-6 rounded-[10px] text-gray-900 shadow-sm ring-1 ring-inset ring-gray-extra-light placeholder:text-gray-light  placeholder:font-normal focus:ring-2 focus:ring-inset focus:ring-success focus-within:ring-2 focus-within:ring-inset  focus-within:ring-success text-sm font-medium" />
       </div>
     </div>
 

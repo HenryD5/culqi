@@ -6,7 +6,7 @@ import vue from '@vitejs/plugin-vue'
 // https://vitejs.dev/config/
 export default defineConfig({
   //Localhost
-  /* server: {
+  server: {
     proxy: {
       "/api": {
         target: "https://fepruebatecnicaculqi-backend-production.up.railway.app/",
@@ -15,7 +15,7 @@ export default defineConfig({
         rewrite: (path) => path.replace(/^\/api/, ""),
       },
     },
-  }, */
+  },
   plugins: [
     vue(),
   ],

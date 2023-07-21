@@ -36,7 +36,7 @@ if (auth.user === undefined) {
         </div>
         <main class="w-full overflow-y-auto">
             <NavBar />
-            <section class="p-8 mb-6">
+            <section class="p-4 sm:p-8 mb-6">
                 <slot />
             </section>
         </main>
