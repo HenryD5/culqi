@@ -19,7 +19,7 @@ async function login() {
 </script>
 
 <template>
-  <form class="w-120" @submit.prevent="login()">
+  <form class="w-full px-8 sm:px-px sm:w-120" @submit.prevent="login()">
     <h4 class="text-2xl font-bold mt-3 mb-6 text-center">Inicia sesión</h4>
     <div class="my-5">
       <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Correo electrónico<span

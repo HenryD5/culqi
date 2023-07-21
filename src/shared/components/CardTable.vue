@@ -22,26 +22,26 @@ const { page, limit, total, search, position, positions, listEmployees, totalPag
 
 <template>
     <CardView>
-        <div class="flex flex-row justify-between items-center gap-4 w-full">
-            <div class="w-auto">
+        <div class="flex flex-col sm:flex-row justify-between items-center gap-4 w-full">
+            <div class=" w-full sm:w-auto">
                 <h4 class="text-gray-900 text-2xl font-bold">{{ props.title }}</h4>
                 <p class="mt-3 text-[#687588] text-sm font-medium" v-if="props.description">
                     {{ props.description }}
                 </p>
             </div>
-            <div class="flex flex-row gap-4 items-center">
+            <div class="w-full sm:w-auto flex flex-row gap-4 items-center">
                 <button @click="showAlert('Feature - Download')"
-                    class="text-center rounded-[10px] text-gray-900 px-4 py-4 text-base font-bold shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 border-2 border-gray-900">
+                    class="w-full sm:w-auto text-center rounded-[10px] text-gray-900 px-4 py-4 text-base font-bold shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 border-2 border-gray-900">
                     <IconDownload class="mr-2 inline" /> Descargar
                 </button>
                 <button @click="showAlert('Feature - Add')"
-                    class="text-center rounded-[10px] text-white bg-gray-900 pl-4 pr-5 py-4 text-base font-bold shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900  border-2 border-gray-900">
+                    class="w-full sm:w-auto text-center rounded-[10px] text-white bg-gray-900 pl-4 pr-5 py-4 text-base font-bold shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900  border-2 border-gray-900">
                     <IconPlus class="mr-2 inline" /> Nuevo
                 </button>
             </div>
         </div>
-        <div class="my-7 flex flex-row gap-4 items-center w-full">
-            <div class="w-3/5">
+        <div class="my-7 flex flex-col sm:flex-row gap-4 items-center w-full">
+            <div class="w-full sm:w-3/5">
                 <div
                     class="w-full flex flex-row-reverse border-0 rounded-[10px] shadow-sm ring-1 ring-inset ring-gray-extra-light focus-within:ring-2 focus-within:ring-inset  focus-within:ring-success py-4 px-6">
                     <span class="flex items-center select-none">
@@ -52,7 +52,7 @@ const { page, limit, total, search, position, positions, listEmployees, totalPag
                         placeholder="Buscar enpleado">
                 </div>
             </div>
-            <div class="w-2/5">
+            <div class="w-full sm:w-2/5">
                 <div class="relative w-full">
                     <select id="country" name="country" v-model="position"
                         class="block appearance-none border-0 w-full py-4 px-6 pr-10 rounded-[10px] text-gray-900 shadow-sm ring-1 ring-inset ring-gray-extra-light placeholder:text-gray-light  placeholder:font-normal focus:ring-2 focus:ring-inset focus:ring-success text-sm font-medium">
@@ -136,8 +136,8 @@ const { page, limit, total, search, position, positions, listEmployees, totalPag
                 </tbody>
             </table>
         </div>
-        <div class="mt-8 mb-5 flex flex-row w-full items-center justify-between gap-4">
-            <div class="w-1/2 md:w-3/4">
+        <div class="mt-8 mb-5 flex flex-col sm:flex-row w-full items-center justify-between gap-4" v-if="listEmployees.length > 4">
+            <div class="w-full sm:w-auto text-center sm:text-left">
                 <nav class="isolate inline-flex" aria-label="Pagination">
                     <a href="#" @click="onChangePage(page - 1)"
                         class="relative inline-flex items-center rounded-lg px-2 py-2 ring-1 ring-inset ring-[#F1F2F4] hover:bg-[#F8F8F8]focus:z-20 focus:outline-offset-0 mr-4"
@@ -165,7 +165,7 @@ const { page, limit, total, search, position, positions, listEmployees, totalPag
                     </a>
                 </nav>
             </div>
-            <div class="w-1/2 md:w-1/4 flex flex-row items-center">
+            <div class="w-full sm:max-w-[350px] flex flex-row items-center">
                 <div class="w-3/5 text-xs text-[#687588] font-medium">
                     Mostrando {{ initalCount }} a {{ page === totalPages ? total : endCount }} de {{ total }} registros
                 </div>
